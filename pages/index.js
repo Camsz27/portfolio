@@ -1,5 +1,9 @@
 import Head from 'next/head';
 import Animation from '../components/Animation';
+import Contact from '../components/Contact';
+import Description from '../components/Description';
+import Header from '../components/Header';
+import Projects from '../components/Projects';
 
 export default function Home() {
   return (
@@ -7,8 +11,11 @@ export default function Home() {
       <Head>
         <title>Camilo Guevara</title>
       </Head>
-      <h1 className='text-3xl'>The start of the portfolio</h1>
+      <Header />
       <Animation />
+      <Description />
+      <Projects />
+      <Contact />
     </div>
   );
 }
