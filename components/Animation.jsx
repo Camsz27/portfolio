@@ -11,30 +11,20 @@ const Animation = () => {
     target,
     animateHeader = true;
 
-  // Main
-  // initHeader();
-  // initAnimation();
-  // addListeners();
-
   const initHeader = useCallback(() => {
     width = window.innerWidth;
     height = window.innerHeight;
     target = { x: width / 2, y: height / 2 };
 
-    // largeHeader = document.getElementById('large-header');
-    // largeHeader.style.height = height + 'px';
-
-    // canvas = document.getElementById('demo-canvas');
     canvasRef.current.width = width;
     canvasRef.current.height = height;
-    // const ctx = canvas.getContext('2d');
 
     // create points
     points = [];
-    for (var x = 0; x < width; x = x + width / 20) {
-      for (var y = 0; y < height; y = y + height / 20) {
-        var px = x + (Math.random() * width) / 20;
-        var py = y + (Math.random() * height) / 20;
+    for (var x = 0; x < width; x = x + width / 30) {
+      for (var y = 0; y < height; y = y + height / 30) {
+        var px = x + (Math.random() * width) / 30;
+        var py = y + (Math.random() * height) / 30;
         var p = { x: px, originX: px, y: py, originY: py };
         points.push(p);
       }
@@ -133,7 +123,7 @@ const Animation = () => {
       context.beginPath();
       context.moveTo(p.x, p.y);
       context.lineTo(p.closest[i].x, p.closest[i].y);
-      context.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
+      context.strokeStyle = 'rgba(37, 99, 235,' + p.active + ')'; //Change lines
       context.stroke();
     }
   }, []);
@@ -143,13 +133,13 @@ const Animation = () => {
       canvasRef.current.getContext('2d').clearRect(0, 0, width, height);
       for (var i in points) {
         // detect points in range
-        if (Math.abs(getDistance(target, points[i])) < 4000) {
+        if (Math.abs(getDistance(target, points[i])) < 10000) {
           points[i].active = 0.3;
           points[i].circle.active = 0.6;
-        } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+        } else if (Math.abs(getDistance(target, points[i])) < 40000) {
           points[i].active = 0.1;
           points[i].circle.active = 0.3;
-        } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+        } else if (Math.abs(getDistance(target, points[i])) < 70000) {
           points[i].active = 0.02;
           points[i].circle.active = 0.1;
         } else {
@@ -165,10 +155,9 @@ const Animation = () => {
   }, [animateHeader, drawLines, height, points, target, width]);
 
   const shiftPoint = useCallback((p) => {
-    // let tl = gsap.timeline()
     gsap.to(p, 1 + 1 * Math.random(), {
-      x: p.originX - 50 + Math.random() * 100,
-      y: p.originY - 50 + Math.random() * 100,
+      x: p.originX - 50 + Math.random() * 50,
+      y: p.originY - 50 + Math.random() * 50,
       ease: 'circ.easeInOut',
       onComplete: function () {
         shiftPoint(p);
@@ -206,7 +195,7 @@ const Animation = () => {
         2 * Math.PI,
         false
       );
-      context.fillStyle = 'rgba(156,217,249,' + _this.active + ')';
+      context.fillStyle = 'rgba(37, 99, 235,' + _this.active + ')'; //Change points
       context.fill();
     };
   }
@@ -225,7 +214,10 @@ const Animation = () => {
   }, [addListeners, initAnimation, initHeader]);
 
   return (
-    <div id='large-header' className='large-header'>
+    <div
+      id='large-header'
+      className='large-header bg-zinc-800 z-10 overflow-hidden'
+    >
       <canvas id='demo-canvas' ref={canvasRef}></canvas>
       <h1 className='main-title'>
         Connect <span className='thin'>Three</span>
