@@ -214,10 +214,21 @@ const Animation = () => {
   }, [addListeners, initAnimation, initHeader]);
 
   return (
-    <div id='large-header' className='z-10 overflow-hidden'>
+    <div id='large-header' className='overflow-hidden relative'>
       <canvas id='demo-canvas' ref={canvasRef}></canvas>
-      <h1 className='main-title'>
-        Connect <span className='thin'>Three</span>
+      <h1
+        className='text-6xl text-center text-white font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+        lang='en'
+      >
+        Hello I&#39;m <span className='text-orange-600'>Camilo</span>, <br />a{' '}
+        <span className='text-orange-600'>full stack</span> web developer
+      </h1>
+      <h1
+        className='text-6xl text-center text-white font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+        lang='es'
+      >
+        Hola soy <span className='text-orange-600'>Camilo</span>, <br />
+        un desarrollador web <span className='text-orange-600'>full stack</span>
       </h1>
     </div>
   );
