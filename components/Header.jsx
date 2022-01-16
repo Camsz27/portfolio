@@ -12,25 +12,55 @@ const Header = () => {
 
   return (
     <nav className='fixed bg-zinc-800 w-full flex text-white py-4 items-center justify-center gap-x-12 z-20'>
-      <Link href={'#about'} passHref smooth>
-        <h3 lang='en' className='cursor-pointer'>
+      <Link href={'#about'} passHref>
+        <h3
+          lang='en'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
           About
         </h3>
       </Link>
-      <h3 lang='es'>Acerca</h3>
-      <h3 lang='en'>Projects</h3>
-      <h3 lang='es'>Proyectos</h3>
-      <h3 lang='en'>Contact</h3>
-      <h3 lang='es'>Contacto</h3>
+      <Link href={'#about'} passHref>
+        <h3
+          lang='es'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
+          Acerca
+        </h3>
+      </Link>
+      <h3
+        lang='en'
+        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+      >
+        Projects
+      </h3>
+      <h3
+        lang='es'
+        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+      >
+        Proyectos
+      </h3>
+      <h3
+        lang='en'
+        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+      >
+        Contact
+      </h3>
+      <h3
+        lang='es'
+        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+      >
+        Contacto
+      </h3>
       <a href='https://github.com/Camsz27' target='_blank' rel='noreferrer'>
-        <AiFillGithub className='w-8 h-8' />
+        <AiFillGithub className='w-8 h-8 hover:scale-125' />
       </a>
       <a
         href='https://www.linkedin.com/in/camilo-guevara/'
         target='_blank'
         rel='noreferrer'
       >
-        <AiFillLinkedin className='w-8 h-8' />
+        <AiFillLinkedin className='w-8 h-8 hover:scale-125' />
       </a>
       <div className='flex items-center justify-center'>
         <h3 lang='en' className='mr-2'>
