@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import About from './About';
 import Technologies from './Technologies';
 
