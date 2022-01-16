@@ -17,6 +17,16 @@ const Header = () => {
       <h3 lang='es'>Proyectos</h3>
       <h3 lang='en'>Contact</h3>
       <h3 lang='es'>Contacto</h3>
+      <a href='https://github.com/Camsz27' target='_blank' rel='noreferrer'>
+        <AiFillGithub className='w-8 h-8' />
+      </a>
+      <a
+        href='https://www.linkedin.com/in/camilo-guevara/'
+        target='_blank'
+        rel='noreferrer'
+      >
+        <AiFillLinkedin className='w-8 h-8' />
+      </a>
       <div className='flex items-center justify-center'>
         <h3 lang='en' className='mr-2'>
           English
@@ -24,11 +34,10 @@ const Header = () => {
         <h3 lang='es' className='mr-2'>
           Inglés
         </h3>
-
-        <label htmlFor='toogleA' className='flex items-center cursor-pointer'>
+        <label htmlFor='toogle' className='flex items-center cursor-pointer'>
           <div className='relative'>
             <input
-              id='toogleA'
+              id='toogle'
               type='checkbox'
               className='sr-only'
               onClick={languageHandler}
@@ -41,17 +50,6 @@ const Header = () => {
         <h3 lang='en'>Spanish</h3>
         <h3 lang='es'>Español</h3>
       </div>
-
-      <a href='https://github.com/Camsz27' target='_blank' rel='noreferrer'>
-        <AiFillGithub className='w-8 h-8' />
-      </a>
-      <a
-        href='https://www.linkedin.com/in/camilo-guevara/'
-        target='_blank'
-        rel='noreferrer'
-      >
-        <AiFillLinkedin className='w-8 h-8' />
-      </a>
     </nav>
   );
 };
