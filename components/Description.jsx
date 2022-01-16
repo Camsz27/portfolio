@@ -4,7 +4,7 @@ import Technologies from './Technologies';
 
 const Description = () => {
   return (
-    <div className='space-y-20'>
+    <div className='space-y-20' id='about'>
       <About />
       <Technologies />
     </div>

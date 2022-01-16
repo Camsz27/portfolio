@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai/index';
 
 const Header = () => {
@@ -11,7 +12,11 @@ const Header = () => {
 
   return (
     <nav className='fixed bg-zinc-800 w-full flex text-white py-4 items-center justify-center gap-x-12 z-20'>
-      <h3 lang='en'>About</h3>
+      <Link href={'#about'} passHref smooth>
+        <h3 lang='en' className='cursor-pointer'>
+          About
+        </h3>
+      </Link>
       <h3 lang='es'>Acerca</h3>
       <h3 lang='en'>Projects</h3>
       <h3 lang='es'>Proyectos</h3>
