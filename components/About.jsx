@@ -16,13 +16,22 @@ const About = () => {
           objectPosition='80px'
         />
       </div>
-      <h1 lang='en' className='text-5xl font-bold text-blue-600 text-center'>
+      <h1
+        lang='en'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         About
       </h1>
-      <h1 lang='es' className='text-5xl font-bold text-blue-600 text-center'>
+      <h1
+        lang='es'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         Acerca
       </h1>
-      <p lang='en' className='text-xl text-white text-center w-3/5 mx-auto'>
+      <p
+        lang='en'
+        className='text-lg md:text-xl text-white text-center w-3/5 mx-auto'
+      >
         I&apos;m a self-taught web developer with a great passion for learning
         something new every day. This, along with the combination of creativity,
         logic, and technology has sparked my interest in this field. I&apos;m
@@ -30,7 +39,10 @@ const About = () => {
         management skills, who&apos;s able to work independently and
         collaboratively
       </p>
-      <p lang='es' className='text-xl text-white text-center w-3/5 mx-auto'>
+      <p
+        lang='es'
+        className='text-lg md:text-xl text-white text-center w-3/5 mx-auto'
+      >
         Soy un desarrollador web autodidacta con un gran interés por aprender
         algo nuevo cada día, esto, junto con la combinación de creatividad,
         lógica y tecnología es lo que ha generado mi gusto por este campo. Soy
