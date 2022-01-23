@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
     const spanishElements = document.querySelectorAll('[lang=es]');
-    console.log(spanishElements);
     [...spanishElements].map((element) => element.classList.add('hidden'));
   }, []);
 

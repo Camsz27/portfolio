@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const Contact = () => {
-  const formHandler = (e) => {
+  const name = useRef();
+  const email = useRef();
+  const subject = useRef();
+  const message = useRef();
+
+  const formHandler = async (e) => {
     e.preventDefault();
-    console.log('clicked');
+    const mail = {
+      subject: subject.current.value,
+      email: email.current.value,
+      name: name.current.value,
+      message: message.current.value,
+    };
+    const request = await fetch('/api/mail', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify(mail),
+    });
+    const response = await request.json();
+    console.log(response);
+    name.current.value = '';
+    email.current.value = '';
+    subject.current.value = '';
+    message.current.value = '';
   };
 
   return (
@@ -37,8 +60,9 @@ const Contact = () => {
             type='text'
             id='sender'
             name='sender'
-            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2 peer'
+            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
             required
+            ref={name}
           />
         </span>
         <span className='flex flex-col gap-y-2'>
@@ -60,15 +84,9 @@ const Contact = () => {
             type='email'
             id='email'
             name='email'
-            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2 peer'
-            required
+            ref={email}
+            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2 peer invalid:border-red-400 invalid:border invalid:text-red-500 focus:invalid:border-red-400 focus:invalid:ring-red-400'
           />
-          <p lang='en' className='invisible peer-invalid:visible text-red-400'>
-            Please enter a valid email address
-          </p>
-          <p lang='es' className='invisible peer-invalid:visible text-red-400'>
-            Por favor ingresa un correo electrónico valido
-          </p>
         </span>
         <span className='flex flex-col gap-y-2'>
           <label
@@ -91,6 +109,7 @@ const Contact = () => {
             name='subject'
             className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
             required
+            ref={subject}
           />
         </span>
         <span className='flex flex-col gap-y-2'>
@@ -113,19 +132,20 @@ const Contact = () => {
             id='message'
             className='bg-zinc-700 h-48 resize-none w-1/3 p-2 focus:outline-none focus:border-blue-600 focus:border-2'
             required
+            ref={message}
           ></textarea>
         </span>
         <button
           lang='en'
           type='submit'
-          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5'
+          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5 mt-4'
         >
           Send Message
         </button>
         <button
           lang='es'
           type='submit'
-          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5'
+          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5 mt-4'
         >
           Enviar Mensaje
         </button>
