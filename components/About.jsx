@@ -5,7 +5,10 @@ import aboutImage from '../public/about-image.png';
 const About = () => {
   return (
     <div className='space-y-10'>
-      <div className='flex justify-center relative' style={{ height: 400 }}>
+      <div
+        className='hidden md:flex justify-center relative'
+        style={{ height: 400 }}
+      >
         <Image
           src={aboutImage}
           alt='man working'
@@ -30,7 +33,7 @@ const About = () => {
       </h1>
       <p
         lang='en'
-        className='text-lg md:text-xl text-white text-center w-3/5 mx-auto'
+        className='text-lg md:text-xl text-white text-center w-4/5 md:w-3/5 mx-auto'
       >
         I&apos;m a self-taught web developer with a great passion for learning
         something new every day. This, along with the combination of creativity,
@@ -41,7 +44,7 @@ const About = () => {
       </p>
       <p
         lang='es'
-        className='text-lg md:text-xl text-white text-center w-3/5 mx-auto'
+        className='text-lg md:text-xl text-white text-center w-4/5 md:w-3/5 mx-auto'
       >
         Soy un desarrollador web autodidacta con un gran interés por aprender
         algo nuevo cada día, esto, junto con la combinación de creatividad,

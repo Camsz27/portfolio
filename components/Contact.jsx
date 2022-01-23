@@ -30,15 +30,21 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact'>
-      <h1 lang='en' className='text-5xl font-bold text-blue-600 text-center'>
+    <div className='-mt-52 sm:-mt-32 md:mt-0' id='contact'>
+      <h1
+        lang='en'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         Contact
       </h1>
-      <h1 lang='es' className='text-5xl font-bold text-blue-600 text-center'>
+      <h1
+        lang='es'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         Contacto
       </h1>
       <form
-        className='w-5/6 mx-auto flex flex-col gap-y-7 pb-32 text-white'
+        className='w-5/6 mx-auto flex flex-col gap-y-7 pb-32 text-white mt-10 md:mt-0'
         onSubmit={formHandler}
       >
         <span className='flex flex-col gap-y-2'>
@@ -60,7 +66,7 @@ const Contact = () => {
             type='text'
             id='sender'
             name='sender'
-            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
+            className='bg-zinc-700 p-2 md:w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
             required
             ref={name}
           />
@@ -85,7 +91,7 @@ const Contact = () => {
             id='email'
             name='email'
             ref={email}
-            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2 peer invalid:border-red-400 invalid:border invalid:text-red-500 focus:invalid:border-red-400 focus:invalid:ring-red-400'
+            className='bg-zinc-700 p-2 md:w-1/3 focus:outline-none focus:border-blue-600 focus:border-2 peer invalid:border-red-400 invalid:border invalid:text-red-500 focus:invalid:border-red-400 focus:invalid:ring-red-400'
           />
         </span>
         <span className='flex flex-col gap-y-2'>
@@ -107,7 +113,7 @@ const Contact = () => {
             type='text'
             id='subject'
             name='subject'
-            className='bg-zinc-700 p-2 w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
+            className='bg-zinc-700 p-2 md:w-1/3 focus:outline-none focus:border-blue-600 focus:border-2'
             required
             ref={subject}
           />
@@ -130,7 +136,7 @@ const Contact = () => {
           <textarea
             name='message'
             id='message'
-            className='bg-zinc-700 h-48 resize-none w-1/3 p-2 focus:outline-none focus:border-blue-600 focus:border-2'
+            className='bg-zinc-700 h-48 resize-none md:w-1/3 p-2 focus:outline-none focus:border-blue-600 focus:border-2'
             required
             ref={message}
           ></textarea>
@@ -138,14 +144,14 @@ const Contact = () => {
         <button
           lang='en'
           type='submit'
-          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5 mt-4'
+          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 md:w-1/5 mt-4'
         >
           Send Message
         </button>
         <button
           lang='es'
           type='submit'
-          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 w-1/5 mt-4'
+          className='text-white bg-orange-600 hover:bg-orange-500 text-xl px-5 py-4 md:w-1/5 mt-4'
         >
           Enviar Mensaje
         </button>
