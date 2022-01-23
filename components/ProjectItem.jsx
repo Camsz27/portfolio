@@ -10,18 +10,18 @@ const ProjectItem = ({ projectNumber }) => {
   }, [projectNumber]);
 
   return (
-    <div className='flex w-5/6 mx-auto items-center mt-3'>
-      <div className='w-1/2 flex flex-col gap-y-6 justify-center'>
+    <div className='flex flex-col md:flex-row w-5/6 mx-auto items-center mt-8 md:mt-3'>
+      <div className='md:w-1/2 flex flex-col gap-y-6 justify-center text-center md:text-left'>
         <h1 lang='en' className='text-orange-600 font-semibold text-3xl'>
           {project.nameEng}
         </h1>
         <h1 lang='es' className='text-orange-600 font-semibold text-3xl'>
           {project.nameEsp}
         </h1>
-        <p lang='en' className='text-white text-xl mr-20'>
+        <p lang='en' className='text-white text-xl md:mr-20'>
           {project.descriptionEng}
         </p>
-        <p lang='es' className='text-white text-xl mr-20'>
+        <p lang='es' className='text-white text-xl md:mr-20'>
           {project.descriptionEsp}
         </p>
         <span className='flex gap-x-7'>
@@ -63,7 +63,7 @@ const ProjectItem = ({ projectNumber }) => {
           </a>
         </span>
       </div>
-      <div className='w-1/2 relative top-12' style={{ height: 500 }}>
+      <div className='md:w-1/2 relative top-12' style={{ height: 500 }}>
         <Image
           src={project.image}
           alt={project.nameEng}

@@ -24,13 +24,19 @@ const Projects = () => {
 
   return (
     <div className='mt-6 pt-20' id='projects'>
-      <h1 lang='en' className='text-5xl font-bold text-blue-600 text-center'>
+      <h1
+        lang='en'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         Projects
       </h1>
-      <h1 lang='es' className='text-5xl font-bold text-blue-600 text-center'>
+      <h1
+        lang='es'
+        className='text-4xl md:text-5xl font-bold text-blue-600 text-center'
+      >
         Proyectos
       </h1>
-      <span className='flex items-center gap-x-4 ml-36 mt-14'>
+      <span className='flex items-center gap-x-4 mx-auto justify-center md:justify-start mt-14 w-5/6'>
         <button
           type='button'
           onClick={leftArrowHandler}
