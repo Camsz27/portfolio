@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div id='contact'>
       <h1 lang='en' className='text-5xl font-bold text-blue-600 text-center'>
         Contact
       </h1>

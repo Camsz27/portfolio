@@ -23,7 +23,7 @@ const Projects = () => {
   };
 
   return (
-    <div className='mt-20'>
+    <div className='mt-6 pt-20' id='projects'>
       <h1 lang='en' className='text-5xl font-bold text-blue-600 text-center'>
         Projects
       </h1>

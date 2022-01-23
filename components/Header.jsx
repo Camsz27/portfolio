@@ -28,30 +28,38 @@ const Header = () => {
           Acerca
         </h3>
       </Link>
-      <h3
-        lang='en'
-        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
-      >
-        Projects
-      </h3>
-      <h3
-        lang='es'
-        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
-      >
-        Proyectos
-      </h3>
-      <h3
-        lang='en'
-        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
-      >
-        Contact
-      </h3>
-      <h3
-        lang='es'
-        className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
-      >
-        Contacto
-      </h3>
+      <Link href={'#projects'} passHref>
+        <h3
+          lang='en'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
+          Projects
+        </h3>
+      </Link>
+      <Link href={'#projects'} passHref>
+        <h3
+          lang='es'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
+          Proyectos
+        </h3>
+      </Link>
+      <Link href={'#contact'} passHref>
+        <h3
+          lang='en'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
+          Contact
+        </h3>
+      </Link>
+      <Link href={'#contact'} passHref>
+        <h3
+          lang='es'
+          className='cursor-pointer hover:text-blue-600 hover:scale-110 hover:font-bold'
+        >
+          Contacto
+        </h3>
+      </Link>
       <a href='https://github.com/Camsz27' target='_blank' rel='noreferrer'>
         <AiFillGithub className='w-8 h-8 hover:scale-125' />
       </a>
