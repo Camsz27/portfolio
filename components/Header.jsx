@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div className='w-full flex justify-center'>
-      <nav className='fixed bg-zinc-800 md:w-full flex text-white py-4 items-center justify-center md:gap-x-12 z-20 flex-wrap'>
+      <nav className='md:fixed bg-zinc-800 md:w-full flex text-white py-4 items-center justify-center md:gap-x-12 z-20 flex-wrap'>
         <div className='hidden md:flex gap-x-12'>
           <Link href={'#about'} passHref>
             <h3
